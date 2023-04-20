@@ -1,0 +1,50 @@
+#!/bin/bash
+
+BIN_DIR="/usr/local/bin"
+
+wget https://github.com/CISOfy/lynis/archive/refs/tags/3.0.8.tar.gz
+tar -zxf 3.0.8.tar.gz
+
+wget https://www.clamav.net/downloads/production/clamav-0.103.3.tar.gz
+tar -zxf clamav-0.103.3.tar.gz
+
+wget ftp://ftp.chkrootkit.org/pub/seg/pac/chkrootkit.tar.gz
+tar -zxf chkrootkit.tar.gz
+
+wget https://downloads.sourceforge.net/project/rkhunter/rkhunter/1.4.6/rkhunter-1.4.6.tar.gz
+tar -zxf rkhunter-1.4.6.tar.gz
+
+wget https://github.com/aide/aide/releases/download/v0.18.2/aide-0.18.2.tar.gz
+tar -zxf aide-0.16.3.tar.gz
+
+wget https://github.com/Tripwire/tripwire-open-source/releases/download/2.4.3.7/tripwire-open-source-2.4.3.7.tar.gz
+tar -jxf tripwire-open-source-2.4.3.7.tar.gz
+
+wget https://github.com/osquery/osquery/releases/download/5.8.2/osquery-dbgsym_5.8.2-1.linux_arm64.deb
+tar -zxf osquery-dbgsym_5.8.2-1.linux_arm64.deb
+
+wget https://github.com/greenbone/openvas-scanner/archive/v21.4.1.tar.gz
+tar -zxf v21.4.1.tar.gz
+
+wget https://nmap.org/dist/nmap-7.91.tar.bz2
+tar -jxf nmap-7.91.tar.bz2
+
+
+if [ ! -d "$BIN_DIR" ]; then
+  if ! sudo mkdir -p "$BIN_DIR"; then
+    echo "Error: Failed to create directory $BIN_DIR"
+    exit 1
+  fi
+fi
+
+if ! sudo cp checkpcPRO "$BIN_DIR/checkpcPRO"; then
+  echo "Error: Failed to copy files to $BIN_DIR"
+  exit 1
+fi
+
+if ! sudo chmod +x "$BIN_DIR/checkpcPRO"; then
+  echo "Error: Failed to set executable permission for $BIN_DIR/checkpcPRO"
+  exit 1
+fi
+
+echo "CheckPC PRO installed successfully!"
