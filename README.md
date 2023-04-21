@@ -4,7 +4,8 @@
 
 Check Pc PRO is a combination of [Check PC](https://github.com/INeddHelp/CheckPC) and [Check PC PLUS](https://github.com/INeddHelp/CheckPcPLUS) and it deeply checks your whole computer and list every process running. It also can relevate malwares and list them.
 
-![screenshot]()
+![screenshot](https://ibb.co/Xz797px)
+![screenshot2](https://ibb.co/q9rr6d2)
 
 # Installation 
 
