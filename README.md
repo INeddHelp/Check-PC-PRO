@@ -29,7 +29,7 @@ checkpcPRO
 
 # Usage 
 
-The script is designed to perform a thorough check on a computer by listing all running processes and running an antivirus scan using ClamAV. The script saves the process list to a file called "processes.log" on the desktop and saves the output of the ClamAV scan to a file called "file_checked.log" on the desktop. Additionally, the script looks for any corrupt files and saves them to a file called "corrupted_files.log" on the desktop. The script is intended to be run on a Linux or macOS operating system.
+The script is designed to perform a thorough check on a computer by listing all running processes and running an antivirus [scan](https://github.com/kylefarris/clamscan) using [ClamAV](https://github.com/Cisco-Talos/clamav). The script saves the process list to a file called "processes.log" on the desktop and saves the output of the [ClamAV](https://github.com/Cisco-Talos/clamav) scan to a file called "file_checked.log" on the desktop. Additionally, the script looks for any corrupt files and saves them to a file called "corrupted_files.log" on the desktop. The script is intended to be run on a Linux or macOS operating system.
 
 # Licence 
 
